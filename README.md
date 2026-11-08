@@ -1,3 +1,3 @@
 # nix-home
 
-Declarate Nix user environment and NIX_PATH.
+Declarative Nix user environment and NIX_PATH.
