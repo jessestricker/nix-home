@@ -5,6 +5,8 @@ let
     config = { };
     overlays = [ ];
   };
+
+  nix-home = pkgs.callPackage ./nix-home { };
 in
 {
   # NIX_PATH from npins sources.
@@ -19,6 +21,7 @@ in
     name = "user-env";
     paths = with pkgs; [
       micro
+      nix-home
       nixd
       nixfmt
       npins
@@ -26,4 +29,6 @@ in
       shfmt
     ];
   };
+
+  inherit nix-home;
 }

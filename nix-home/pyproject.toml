@@ -1,0 +1,14 @@
+[project]
+name = "nix-home"
+version = "0.0.0"
+requires-python = ">=3.14"
+dependencies = [ #
+    "click>=8.4.2",
+]
+
+[project.scripts]
+nix-home = "nix_home:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
