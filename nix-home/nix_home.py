@@ -16,7 +16,7 @@ def main():
 
 @main.command()
 @click.help_option("--help", "-h")
-@click.argument("config_dir", type=Path)
+@click.argument("config_dir", type=click.Path(path_type=Path))
 def apply_cmd(config_dir: Path):
     nix_path_profile = get_nix_state_home() / "profiles/channels"
 
